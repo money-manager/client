@@ -24,6 +24,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
     "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
@@ -34,6 +35,15 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
     "jest": "^21.2.1",
     "node-sass": "^4.7.2",
     "prop-types": "^15.6.0",
@@ -52,9 +62,10 @@
     "webpack-merge": "^4.1.1"
   },
   "scripts": {
-    "build": "webpack build --config webpack/webpack.dev.js",
-    "build:watch": "webpack build --config webpack/webpack.dev.js --watch",
-    "build:prod": "webpack build --config webpack/webpack.prod.js",
-    "test": "jest ./src/**/* --no-cache"
+    "build": "gulp build",
+    "build:watch": "gulp watch",
+    "build:prod": "gulp build-prod",
+    "test": "yarn lint && jest ./src/**/* --no-cache",
+    "lint": "eslint ./src/**/*.jsx"
   }
 }

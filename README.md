@@ -9,11 +9,23 @@ $: yarn install
 Dev bundles:
 
 ```sh
-$: yarn build:dev
+$: yarn build
+```
+
+Dev bundles in watch mode:
+
+```sh
+$: yarn build:watch
 ```
 
 Prod bundles:
 
 ```sh
-$: yarn build
+$: yarn build:prod
+```
+
+Testing:
+
+```sh
+$: yarn test
 ```
